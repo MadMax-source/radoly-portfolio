@@ -63,7 +63,7 @@ export const navigation = [
     title: "Portfolio",
     url: "/portfolio",
   },
-];
+] as const;
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 

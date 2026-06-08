@@ -65,7 +65,7 @@ const Collaboration = () => {
                                             width={app.width}
                                             height={app.height}
                                             alt={app.title}
-                                            src={app.icon}
+                                            src={typeof app.icon === "string" ? app.icon : app.icon.src}
                                         />
                                     </div>
                                 </li>

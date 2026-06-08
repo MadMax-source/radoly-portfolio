@@ -8,6 +8,7 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import { getImageSrc } from "@/lib/imageHelper";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -17,7 +18,6 @@ const Hero = () => {
       className="pt-[12rem] -mt-[5.25rem]"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
-      customPaddings
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
@@ -27,7 +27,7 @@ const Hero = () => {
             <span className="inline-block relative">
               RadolyTech{" "}
               <img
-                src={curve}
+                src={getImageSrc(curve)}
                 className="absolute top-full left-0 w-full xl:-mt-2"
                 width={624}
                 height={28}
@@ -51,7 +51,7 @@ const Hero = () => {
 
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
-                  src={robot}
+                  src={getImageSrc(robot as any)}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                   width={1024}
                   height={490}
@@ -83,7 +83,7 @@ const Hero = () => {
           </div>
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
-              src={heroBackground}
+              src={getImageSrc(heroBackground as any)}
               className="w-full"
               width={1440}
               height={1800}

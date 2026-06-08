@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import SectionSvg from '../assets/svg/SectionSvg'
 
-const Section = ({ className, id, crosses, crossesOffset, customPaddings, children }) => {
+interface SectionProps {
+  className?: string;
+  id?: string;
+  crosses?: boolean;
+  crossesOffset?: string;
+  customPaddings?: string;
+  children: ReactNode;
+}
+
+const Section = ({ className, id, crosses, crossesOffset, customPaddings, children }: SectionProps) => {
     return (
         <div id={id} className={`realtive ${customPaddings || 'py-10 lg:py-16 xl:py-20'} ${crosses ? 'lg:py-32 xl:py-40 ' : ''} ${className || ''}`}>
             {children}
